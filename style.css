@@ -4,6 +4,7 @@
   --green-clr: #10b981;
   --grey-light-clr: #e5e7eb;
   --grey-dark-clr: #6b7280;
+  --white-clr: #f8fafc;
 }
 
 * {
@@ -14,15 +15,17 @@
 
 body {
   font-family: 'Roboto', sans-serif;
+  background-color: var(--white-clr);
 }
 
 .container {
   display: grid;
   grid-template-columns: 1fr 4fr;
-  grid-template-rows: min-content min-content;
+  grid-template-rows: 1fr 92.7vh;
 }
 .sidebar {
   grid-row: 1/-1;
+  background-color: var(--green-clr);
 }
 .sidebar > .logo-container {
   display: grid;
@@ -52,10 +55,13 @@ body {
 }
 
 .main-content {
+  background-color: var(--grey-light-clr);
+
   display: grid;
   grid-column: 2;
   grid-template-columns: 3fr 1fr;
   grid-template-rows: 1fr 1fr;
+  gap: 30px;
 }
 
 .main-content > .projects {
@@ -65,4 +71,14 @@ body {
 .project-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card,
+.trending-container,
+.announcement-container {
+  background-color: var(--white-clr);
+}
+
+.announcement-container {
+
 }
