@@ -133,5 +133,18 @@ img.logo-white {
 }
 
 .announcement-container {
+  padding: 30px;
+  display: grid;
+  gap: 25px;
 
+  font-size: 0.75rem;
+  border-radius: 8px;
+  -webkit-box-shadow: 4px 4px 12px 2px rgba(107, 107, 107, 0.13);
+  -moz-box-shadow: 4px 4px 12px 2px rgba(107, 107, 107, 0.13);
+  box-shadow: 4px 4px 12px 2px rgba(107, 107, 107, 0.13);
+}
+
+.announcement-title {
+  font-weight: bold;
+  font-size: 0.85rem;
 }
