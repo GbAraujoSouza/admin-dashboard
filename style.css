@@ -145,8 +145,8 @@ img.logo-white {
 
   display: grid;
   grid-column: 2;
-  grid-template-columns: 3fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 3fr minmax(300px, 1fr);
+  grid-template-rows: min-content 1fr;
   gap: 30px;
 
   padding: 35px;
@@ -226,8 +226,14 @@ img.logo-white {
   gap: 5px;
 }
 
-@media (min-width: 768px) {
-  .button-36 {
-    padding: 0 2.6rem;
+@media screen and (max-width: 860px) {
+  
+  .main-content {
+    grid-template-columns: 1fr;
+  }
+  .bottom-header {
+    grid-template: 1fr 1fr / auto;
+    row-gap: 30px;
+    justify-items: center;
   }
 }
