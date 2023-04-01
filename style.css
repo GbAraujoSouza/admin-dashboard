@@ -68,13 +68,77 @@ img.logo-white {
   gap: 40px;
 }
 .search-bar {
-  display: grid;
+  /* display: grid;
   grid-template-columns: auto 1fr;
-  gap: 15px;
-  flex-grow: 1;
+  gap: 15px; */
+  /* flex-grow: 1; */
+
+  position: relative;
+  height: 30px;
+  width: 30px;
+  border-radius: 100vh;
+  transition: 0.5s;
+  box-shadow: 0 0 5px 2px #7070704d;
+  overflow: hidden;
 }
+.search-bar.active {
+  width: 100%;
+}
+
+.search-bar .search-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  border-radius: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* color: #297eff; */
+  cursor: pointer;
+}
+
+.search-bar .search-input {
+  position: relative;
+  width: 100%;
+  height: 30px;
+  left: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-bar .search-input input {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  padding: 10px 0;
+}
+
+.search-bar .search-clear {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 15px;
+  width: 15px;
+  right: 15px;
+  background: #fff;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
 .top-header {
   display: flex;
+  align-items: center;
   gap: 20px;
 }
 .top-header .user-header {
@@ -87,6 +151,11 @@ img.logo-white {
 .user-header .user-name {
   font-weight: bold;
 }
+.user-header .user-pic {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100vh;
+}
 .bottom-header {
   display: grid;
   grid-template-columns: 3fr 1fr;
@@ -97,6 +166,9 @@ img.logo-white {
   column-gap: 15px;
 }
 .bottom-header > .user-info > img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100vh;
   grid-row: 1 / 3;
 }
 .greeting {
@@ -230,6 +302,12 @@ img.logo-white {
 .trending-profile {
   display: flex;
   gap: 10px;
+}
+.trending-profile > img {
+  border-radius: 2rem;
+  width: 2rem;
+  height: 2rem;
+  background: #fff;
 }
 .trending-user {
   display: grid;
